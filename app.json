@@ -11,6 +11,14 @@
     "package": "com.anonymous.findmystuff"
   },
   "ios": {
-    "bundleIdentifier": "com.anonymous.findmystuff"
+    "bundleIdentifier": "com.anonymous.findmystuff",
+    "infoPlist": {
+      "ITSAppUsesNonExemptEncryption": false
+    }
+  },
+  "extra": {
+    "eas": {
+      "projectId": "02cea3b7-0552-435c-999b-ac3f080229db"
+    }
   }
 }
