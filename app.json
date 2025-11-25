@@ -1,0 +1,10 @@
+{
+  "name": "findmystuff",
+  "displayName": "FindMyStuff",
+  "version": "0.1.0",
+  "newArchEnabled": false,
+  "project": {
+    "projectName": "FindMyStuff",
+    "projectId": "findmystuff"
+  }
+}
