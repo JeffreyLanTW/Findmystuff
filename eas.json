@@ -18,15 +18,5 @@
     "production": {
       "distribution": "store"
     }
-  },
-  "submit": {
-    "production": {
-      "ios": {
-        "ascProvider": "Your App Store Connect Provider ID"
-      },
-      "android": {
-        "serviceAccount": "path/to/service-account.json"
-      }
-    }
   }
 }
