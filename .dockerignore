@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Environment files
+.env*
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+.eslintcache
+
+# Coverage
+coverage/

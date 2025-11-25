@@ -75,6 +75,16 @@
 - What happens when [boundary condition]?
 - How does system handle [error scenario]?
 
+## Constitution Check
+
+*GATE: Must pass before requirements are finalized.*
+
+- [ ] **Principle I - Test-First**: Specification includes independent test scenarios for each user story
+- [ ] **Principle II - Code Quality**: Requirements specify type safety and code organization standards
+- [ ] **Principle III - UX Consistency**: User journeys maintain consistent component patterns and navigation flow
+- [ ] **Principle IV - Performance**: Success criteria include measurable performance targets (response times, memory)
+- [ ] **Principle V - React Native Mobile-First**: Features designed for mobile screens first, cross-platform compatible
+
 ## Requirements *(mandatory)*
 
 <!--

@@ -8,9 +8,9 @@ description: "Task list template for feature implementation"
 **Input**: Design documents from `/specs/[###-feature-name]/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
-**Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
+**Tests**: Tests are MANDATORY for all features - every task MUST have corresponding test coverage. Write tests FIRST, verify they FAIL before implementation begins.
 
-**Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
+**Organization**: Tasks are grouped by user story to enable independent implementation, testing, and deployment of each story.
 
 ## Format: `[ID] [P?] [Story] Description`
 
@@ -79,21 +79,29 @@ Examples of foundational tasks (adjust based on your project):
 
 **Independent Test**: [How to verify this story works on its own]
 
-### Tests for User Story 1 (OPTIONAL - only if tests requested) ⚠️
+### Tests for User Story 1 (MANDATORY - per Constitution Principle I)
 
-> **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
+> **REQUIRED: Write these tests FIRST, verify they FAIL, then implement to make them PASS**
+> **Target**: ≥ 80% code coverage for this user story
 
-- [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T010 [P] [US1] Unit tests for [Entity1] in tests/unit/test_[entity1].ts
+- [ ] T011 [P] [US1] Unit tests for [Entity2] in tests/unit/test_[entity2].ts
+- [ ] T012 [P] [US1] Unit tests for [Service] in tests/unit/test_[service].ts
+- [ ] T013 [US1] Integration test for [user journey] in tests/integration/test_[scenario].ts
+- [ ] T014 [US1] E2E test for [critical user path] in tests/e2e/test_[user_story].ts
+- [ ] T015 [US1] Performance test: [scenario] must complete within [target ms]
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
-- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
+- [ ] T016 [P] [US1] Create TypeScript types for [Entity1] in src/types/[entity1].ts
+- [ ] T017 [P] [US1] Create TypeScript types for [Entity2] in src/types/[entity2].ts
+- [ ] T018 [US1] Implement [Service] business logic in src/services/[service].ts (depends on tests passing)
+- [ ] T019 [US1] Create React Native screen for [feature] in src/screens/[ScreenName]/index.tsx
+- [ ] T020 [US1] Implement [UI Components] in src/components/[ComponentName]/index.tsx
+- [ ] T021 [US1] Add Redux store/slices for state management in src/store/[feature]/
+- [ ] T022 [US1] Add input validation and error handling (FR requirements)
+- [ ] T023 [US1] Add structured logging for debugging
+- [ ] T024 [US1] Ensure TypeScript strict mode compliance (no `any` types)
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
