@@ -6,5 +6,11 @@
   "project": {
     "projectName": "FindMyStuff",
     "projectId": "findmystuff"
+  },
+  "android": {
+    "package": "com.anonymous.findmystuff"
+  },
+  "ios": {
+    "bundleIdentifier": "com.anonymous.findmystuff"
   }
 }
