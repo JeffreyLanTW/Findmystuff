@@ -117,7 +117,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
    * Navigate to AddItemScreen
    */
   const handleAddItem = () => {
-    navigation.navigate('AddItemStack', { screen: 'AddItem' });
+    navigation.navigate('AddItem');
   };
 
   /**

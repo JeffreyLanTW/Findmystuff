@@ -291,7 +291,7 @@ export const AddItemScreen: React.FC<AddItemScreenProps> = ({ navigation }) => {
           onCreateNew={() => {
             // Navigate to AddLocationScreen when user wants to create new location
             setShowLocationPicker(false);
-            navigation.navigate('AddLocationStack', {
+            navigation.navigate('LocationsTab', {
               screen: 'AddLocation',
               params: { onLocationCreated: handleLocationSelect },
             });

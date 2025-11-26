@@ -2,10 +2,15 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-// Import screens (to be created in Phase 3-4)
-// For now, we'll create placeholder screens
+// Import screens
+import { HomeScreen } from '@screens/HomeScreen';
+import { ItemDetailScreen } from '@screens/ItemDetailScreen';
+import { AddItemScreen } from '@screens/AddItemScreen';
+import { LocationsScreen } from '@screens/LocationsScreen';
+import { AddLocationScreen } from '@screens/AddLocationScreen';
+import { LocationDetailScreen } from '@screens/LocationDetailScreen';
 
 // Types
 import type { RootTabParamList, HomeStackParamList, LocationsStackParamList } from './types';
@@ -26,21 +31,21 @@ const HomeStackNavigator: React.FC = () => {
     >
       <HomeStack.Screen
         name="Home"
-        component={() => <></>} // Placeholder - to be implemented in Phase 4 (T026)
+        component={HomeScreen}
         options={{
           title: 'My Inventory',
         }}
       />
       <HomeStack.Screen
         name="ItemDetail"
-        component={() => <></>} // Placeholder - to be implemented in Phase 4 (T030)
+        component={ItemDetailScreen}
         options={{
           title: 'Item Details',
         }}
       />
       <HomeStack.Screen
         name="AddItem"
-        component={() => <></>} // Placeholder - to be implemented in Phase 3 (T018)
+        component={AddItemScreen}
         options={{
           title: 'Add Item',
         }}
@@ -61,21 +66,21 @@ const LocationsStackNavigator: React.FC = () => {
     >
       <LocationsStack.Screen
         name="Locations"
-        component={() => <></>} // Placeholder - to be implemented in Phase 5 (T034)
+        component={LocationsScreen}
         options={{
           title: 'Locations',
         }}
       />
       <LocationsStack.Screen
         name="LocationDetail"
-        component={() => <></>} // Placeholder - to be implemented in Phase 5
+        component={LocationDetailScreen}
         options={{
           title: 'Location Details',
         }}
       />
       <LocationsStack.Screen
         name="AddLocation"
-        component={() => <></>} // Placeholder - to be implemented in Phase 5 (T035)
+        component={AddLocationScreen}
         options={{
           title: 'Add Location',
         }}

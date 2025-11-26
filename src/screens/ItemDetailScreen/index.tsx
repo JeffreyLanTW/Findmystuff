@@ -79,10 +79,7 @@ export const ItemDetailScreen: React.FC<ItemDetailScreenProps> = ({
   // Navigate to edit screen
   const handleEdit = () => {
     if (item) {
-      navigation.navigate('AddItemStack', {
-        screen: 'AddItem',
-        params: { item }, // Pass item for editing
-      });
+      navigation.navigate('AddItem', { item });
     }
   };
 

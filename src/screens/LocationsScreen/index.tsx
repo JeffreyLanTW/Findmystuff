@@ -93,13 +93,11 @@ export const LocationsScreen: React.FC<LocationsScreenProps> = ({ navigation }) 
 
   const handleLocationPress = useCallback((location: Location) => {
     dispatch(setSelectedLocation(location.id));
-    navigation.navigate('HomeStack', { screen: 'Home' });
+    navigation.navigate('HomeTab', { screen: 'Home' });
   }, [dispatch, navigation]);
 
   const handleAddLocation = () => {
-    navigation.navigate('AddLocationStack', {
-      screen: 'AddLocation',
-    });
+    navigation.navigate('AddLocation');
   };
 
   const renderLocationItem = ({ item }: { item: Location }) => {
